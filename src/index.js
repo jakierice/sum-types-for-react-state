@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import Spinner from '@atlaskit/spinner';
-import {ProfileCard} from '@atlaskit/profilecard';
+import { ProfileCard } from '@atlaskit/profilecard';
 import styled from 'styled-components';
 
-import {CardState, Loading, LoadingError, Display} from './states';
+import { CardState, Loading, LoadingError, Display } from './states';
 
 // Simple function to build a URL.
 function apiURL(email) {
@@ -21,7 +21,7 @@ function loadData(email, setState) {
 
 // A component to display if we have an error.
 const ErrorCard = () => (
-  <ProfileCard errorType={{reason: 'default'}} hasError />
+  <ProfileCard errorType={{ reason: 'default' }} hasError />
 );
 
 function mapState(state) {
@@ -61,7 +61,7 @@ function renderComponent(state) {
 }
 
 // Our component with everything tied together.
-export function UserCard({email}) {
+export function UserCard({ email }) {
   // Initialise our hooks.
   const [state, setState] = useState(new Loading());
   useEffect(() => loadData(email, setState), [email]);
