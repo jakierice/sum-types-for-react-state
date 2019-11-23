@@ -1,5 +1,5 @@
 {
-  "name": "sum-types-for-react-state",
+  "name": "@jakie/sum-types-for-react-state",
   "version": "1.0.0",
   "description": "A demonstration of how Sum Types can be used for managing React State.",
   "keywords": [],
